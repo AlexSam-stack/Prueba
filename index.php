@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['S_ID'])){
+      header("Location: view/index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,9 +81,23 @@
 <script src="plantilla/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="plantilla/dist/js/adminlte.min.js"></script>
-<script src="js/console_usuario.js"></script>
+<script src="js/console_usuario.js?rev=<?php echo time();?>"></script>
 <!-- tema externo para la salidas de mensajes-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script>
+  const rmcheck       = document.getElementById("remember"),
+        usuarioInput  = document.getElementById("txt_usuario"),
+        passInput     = document.getElementById("txt_contra");
+  if(localStorage.checkbox && localStorage.checkbox != ""){
+    rmcheck.setAttribute("checked","checked");
+    usuarioInput.value =localStorage.usuario;
+    passInput.value    =localStorage.pass;
+  }else{
+    rmcheck.removeAttribute("checked");
+    usuarioInput.value ="";
+    passInput.value    ="";
+  }
+  
+</script>
 </body>
 </html>
