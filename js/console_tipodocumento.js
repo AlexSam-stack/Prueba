@@ -58,28 +58,28 @@ function AbrirRegistro(){
     $("#modal_registro").modal("show");
 }
 
-function Registrar_Area() {
-    let area = document.getElementById("txt_area").value;
-    if(area.length == 0){
+function Registrar_Tipo() {
+    let tipo = document.getElementById("txt_tipo").value;
+    if(tipo.length == 0){
         return Swal.fire("Mensaje de Advertencia", "Debe ingresar un área", "warning");
     }
 
     $.ajax({
-        url: "../controller/area/controlador_registro_area.php",
+        url: "../controller/tipo/controlador_registro_tipo.php",
         type: 'POST',
         data: {
-            a: area
+            tipo:tipo
         }
     }).done(function(resp) {
         if (resp > 0) {
             if (resp == 1) {
-                Swal.fire("Mensaje de Confirmación", "Nuevo Área Registrada", "success").then((value) => {
-                    document.getElementById("txt_area").value = "";
+                Swal.fire("Mensaje de Confirmación", "Nuevo Tipo Documento Registrado", "success").then((value) => {
+                    document.getElementById("txt_tipo").value = "";
                     tbl_tipodocumento.ajax.reload();
                     $("#modal_registro").modal("hide");
                 });
             } else {
-                Swal.fire("Mensaje de Advertencia", "El área ingresada ya se encuentra en la base de datos", "warning");
+                Swal.fire("Mensaje de Advertencia", "El Tipo Documento ingresado ya se encuentra en la base de datos", "warning");
             }
         } else {
             return Swal.fire("Mensaje de Error", "No se completó el registro", "error");

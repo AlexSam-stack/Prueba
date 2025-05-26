@@ -18,12 +18,12 @@
             conexionBD::cerrar_conexion();
         }
 
-        public function Registrar_Area($area){
+        public function Registrar_Tipo($tipo){
             $c = conexionBD::conexionPDO();
-            $sql        = "CALL SP_REGISTRAR_AREA(?)";
+            $sql        = "CALL SP_REGISTRAR_TIPO(?)";
             $arreglo    = array();
             $query      = $c->prepare($sql);
-            $query      ->bindParam(1,$area);
+            $query      ->bindParam(1,$tipo);
             $query->execute();
         
 
