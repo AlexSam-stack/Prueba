@@ -33,13 +33,13 @@
             conexionBD::cerrar_conexion();
         }
 
-        public function Modificar_Area($id,$area,$esta){
-                        $c = conexionBD::conexionPDO();
-            $sql        = "CALL SP_MODIFICAR_AREA(?,?,?)";
+        public function Modificar_Tipo($id,$tipo,$esta){
+            $c = conexionBD::conexionPDO();
+            $sql        = "CALL SP_MODIFICAR_TIPO(?,?,?)";
             $arreglo    = array();
             $query      = $c->prepare($sql);
             $query      ->bindParam(1,$id);
-            $query      ->bindParam(2,$area);
+            $query      ->bindParam(2,$tipo);
             $query      ->bindParam(3,$esta);
             $query->execute();
         

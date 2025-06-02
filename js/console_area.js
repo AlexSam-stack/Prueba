@@ -50,7 +50,7 @@ $('#tabla_area').on('click', '.editar', function(){
     $("#modal_editar").modal("show");
     document.getElementById("txt_area_editar").value=data.area_nombre;
     document.getElementById("txt_idarea").value=data.area_cod;
-    document.getElementById("txt_status").value=data.area_estado;
+    document.getElementById("select_status").value=data.area_estado;
 })
 
 function AbrirRegistro(){

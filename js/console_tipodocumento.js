@@ -48,9 +48,9 @@ $('#tabla_tipo').on('click', '.editar', function(){
         var data = tbl_tipodocumento.row(this).data();
     } // Permite llevar los datos cuando es tamaño celular y usas el responsive de tbl_tipodocumento
     $("#modal_editar").modal("show");
-    document.getElementById("txt_area_editar").value=data.area_nombre;
-    document.getElementById("txt_idarea").value=data.area_cod;
-    document.getElementById("txt_status").value=data.area_estado;
+    document.getElementById("txt_tipo_editar").value=data.tipodo_descripcion;
+    document.getElementById("txt_idtipo").value=data.tipodocumento_id;
+    document.getElementById("select_status").value=data.tipodo_estado;
 })
 
 function AbrirRegistro(){
@@ -87,20 +87,20 @@ function Registrar_Tipo() {
     });
 }
 
-function Modificar_Area() {
-    let id = document.getElementById("txt_area").value;
-    let area = document.getElementById("txt_area_editar");
+function Modificar_Tipo() {
+    let id = document.getElementById("txt_idtipo").value;
+    let tipo = document.getElementById("txt_tipo_editar").value;
     let esta = document.getElementById("select_status").value;
-    if(area.length == 0 || id.length==0){
-        return Swal.fire("Mensaje de Advertencia", "Debe ingresar un área", "warning");
+    if(tipo.length == 0 || id.length==0){
+        return Swal.fire("Mensaje de Advertencia", "Debe ingresar un tipo", "warning");
     }
 
     $.ajax({
-        url: "../controller/area/controlador_modificar_area.php",
+        "url": "../controller/tipo/controlador_modificar_tipo.php",
         type: 'POST',
         data: {
             id:id,
-            are: area,
+            tipo: tipo,
             esta:esta
         }
     }).done(function(resp) {
@@ -111,7 +111,7 @@ function Modificar_Area() {
                     $("#modal_editar").modal("hide");
                 });
             } else {
-                Swal.fire("Mensaje de Advertencia", "El área ingresada ya se encuentra en la  base de datos", "warning");
+                Swal.fire("Mensaje de Advertencia", "El tipo documento ingresado ya se encuentra en la  base de datos", "warning");
             }
         } else {
             return Swal.fire("Mensaje de Error", "No se completó la modificación", "error");

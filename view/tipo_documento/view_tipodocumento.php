@@ -79,7 +79,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">EDITAR DATOS DE AREA</h5>
+              <h5 class="modal-title" id="staticBackdropLabel">EDITAR DATOS DE TIPO DOCUMENTO</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -87,9 +87,9 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-12">
-                 <label for="">AREA</label> 
-                 <input type="text" class="form-control" id="txt_area_editar">
-                 <input type="text" id="txt_idarea" hidden> 
+                 <label for="">TIPO</label> 
+                 <input type="text" class="form-control" id="txt_tipo_editar">
+                 <input type="text" id="txt_idtipo" hidden> 
                 </div>
                 <div class="col">
                   <lable for="">Estatus</lable>
@@ -102,7 +102,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="Modificar_Area()">Modificar</button>
+              <button type="button" class="btn btn-success" onclick="Modificar_Tipo()">Modificar</button>
             </div>
           </div>
         </div>
