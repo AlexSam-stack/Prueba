@@ -1,3 +1,6 @@
+
+<script src="../js/console_usuario.js?rev=<?php echo time();?>"></script>
+
 <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -26,10 +29,19 @@
                 <h5 class="m-0">Listado de usuario</h5>
               </div>
               <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <table id="tabla_usuario" class="display">
+                      <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Usuario</th>
+                            <th>Area</th>
+                            <th>rol</th>
+                            <th>Empleado</th>
+                            <th>Estatus</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>   
+                </table>
               </div>
             </div>
           </div>
@@ -39,4 +51,9 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+     <script>
+      	$(document).ready(function() {
+          listar_usuario();
+        });
+     </script>
     
