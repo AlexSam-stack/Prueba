@@ -42,8 +42,6 @@
             $query      ->bindParam(2,$area);
             $query      ->bindParam(3,$esta);
             $query      ->execute();
-        
-
             if($row =$query->fetchColumn()){
                 return $row;
             }

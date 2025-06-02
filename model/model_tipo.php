@@ -2,9 +2,9 @@
     require_once "model_conexion.php";
     
     class Modelo_Tipo extends conexionBD {
- 
 
-        public function Listar_tipo(){
+
+        public function Listar_Tipo(){
             $c = conexionBD::conexionPDO();
             $sql = "CALL SP_LISTAR_TIPO_DOCUMENTO()";
             $arreglo = array();
@@ -18,12 +18,12 @@
             conexionBD::cerrar_conexion();
         }
 
-        public function Registrar_Tipo($area){
+        public function Registrar_Tipo($tipo){
             $c = conexionBD::conexionPDO();
             $sql        = "CALL SP_REGISTRAR_TIPO(?)";
             $arreglo    = array();
             $query      = $c->prepare($sql);
-            $query      ->bindParam(1,$area);
+            $query      ->bindParam(1,$tipo);
             $query->execute();
         
 
@@ -33,15 +33,15 @@
             conexionBD::cerrar_conexion();
         }
 
-        public function Modificar_Tipo($id,$area,$esta){
+        public function Modificar_Tipo($id,$tipo,$esta){
             $c = conexionBD::conexionPDO();
             $sql        = "CALL SP_MODIFICAR_TIPO(?,?,?)";
             $arreglo    = array();
             $query      = $c->prepare($sql);
             $query      ->bindParam(1,$id);
-            $query      ->bindParam(2,$area);
+            $query      ->bindParam(2,$tipo);
             $query      ->bindParam(3,$esta);
-            $query      ->execute();
+            $query->execute();
         
 
             if($row =$query->fetchColumn()){

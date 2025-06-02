@@ -4,12 +4,20 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+<<<<<<< HEAD
             <h1 class="m-0">MANTENIMIENTO TIPO DE DOCUMENTO</h1>
+=======
+            <h1 class="m-0">MANTENIMIENTO TIPO DOCUMENTO</h1>
+>>>>>>> 99da0eb5aef97173023865155d8f4dceda7cad74
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
+<<<<<<< HEAD
               <li class="breadcrumb-item active">Tipo de Documento</li>
+=======
+              <li class="breadcrumb-item active">Tipo documento</li>
+>>>>>>> 99da0eb5aef97173023865155d8f4dceda7cad74
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -24,6 +32,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
+<<<<<<< HEAD
                 <h3 class="card-title"><b>Listado de tipo de documento</b></h3>
                 <button class="btn btn-danger btn-sm float-right" onclick="AbrirRegistro()"><i class="fas fa-plus"></i> Nuevo Registro</button>
               </div>
@@ -33,6 +42,17 @@
                         <tr>
                             <th>#</th>
                             <th>Tipo Documento</th>
+=======
+                <h3 class="card-title"><b>Listado de tipo documento</b></h3>
+                <button class="btn btn-danger btn-sm float-right" onclick="AbrirRegistro()"><i class="fas fa-plus"></i> Nuevo Registro</button>
+              </div>
+              <div class="card-body">
+                <table id="tabla_tipo" class="display">
+                      <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tipo documento</th>
+>>>>>>> 99da0eb5aef97173023865155d8f4dceda7cad74
                             <th>Fecha Registro </th>
                             <th>Estatus</th>
                             <th>Acción</th>
@@ -53,7 +73,11 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
+<<<<<<< HEAD
               <h5 class="modal-title" id="staticBackdropLabel">Registro tipo de documento</h5>
+=======
+              <h5 class="modal-title" id="staticBackdropLabel">Registro de Tipo de Documento</h5>
+>>>>>>> 99da0eb5aef97173023865155d8f4dceda7cad74
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -79,7 +103,11 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
+<<<<<<< HEAD
               <h5 class="modal-title" id="staticBackdropLabel">EDITAR TIPO DE DOCUMENTO</h5>
+=======
+              <h5 class="modal-title" id="staticBackdropLabel">EDITAR DATOS DE TIPO DOCUMENTO</h5>
+>>>>>>> 99da0eb5aef97173023865155d8f4dceda7cad74
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
